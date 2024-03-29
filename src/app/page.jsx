@@ -35,10 +35,14 @@ const Page = () => {
 
 	return (
 		<div className={styles.container}>
+			<div className={styles.header}>
+				<span>Weather</span>
+			</div>
 			<div className={styles.data}>
 				<div className={styles.tempBox}>
 					<Location city={data.name} country={data.sys.country} />
 					<Temperature temp={convertToCelcius(data.main.temp)} />
+					<span className={styles.weatherDesc}>{data.weather[0].description}</span>
 				</div>
 			</div>
 		</div>

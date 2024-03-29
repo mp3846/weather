@@ -6,6 +6,27 @@
 	background: #ccc;
 }
 
+.weatherDesc {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 3rem;
+}
+
+.header {
+	font-size: 4rem;
+	height: 15rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
+	justify-content: center;
+	width: 100%;
+	position: relative;
+	z-index: 1;
+	font-weight: bolder;
+}
+
 .data {
 	display: flex;
 	flex-direction: column;
