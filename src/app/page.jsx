@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import styles from '../styles/page.module.css'
 import Temperature from '../components/temperature'
 import Location from '../components/location'
+import CitySelector from '../components/citySelector'
 
 const initialData = {
 	name: 'London',
@@ -31,6 +32,11 @@ const Page = () => {
 		getData()
 	}, [city, country])
 
+	const handleLocationChange = (location) => {
+		setCity(location.city)
+		setCountry(location.country)
+	}
+
 	const convertToCelcius = (temp) => (temp - 273).toFixed()
 
 	return (
@@ -38,6 +44,7 @@ const Page = () => {
 			<div className={styles.header}>
 				<span>Weather</span>
 			</div>
+			<CitySelector onLocationChange={handleLocationChange} />
 			<div className={styles.data}>
 				<div className={styles.tempBox}>
 					<Location city={data.name} country={data.sys.country} />
