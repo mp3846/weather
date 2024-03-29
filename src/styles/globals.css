@@ -1,0 +1,23 @@
+@font-face {
+	font-family: PoiretOne;
+	src: url("/fonts/PoiretOne.ttf");
+}
+
+html,
+body {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	font-display: optional;
+	font-family: PoiretOne;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	line-height: 1.2;
+}
+
+body {
+	overflow-x: hidden;
+}
