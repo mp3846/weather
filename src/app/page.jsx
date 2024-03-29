@@ -2,6 +2,7 @@
 import { getWeatherData } from './actions'
 import { useEffect, useState } from 'react'
 import styles from '../styles/page.module.css'
+import Temperature from '../components/temperature'
 
 const initialData = {
 	name: 'London',
@@ -34,7 +35,9 @@ const Page = () => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.data}>
-				<div className={styles.tempBox}>{convertToCelcius(data.main.temp)}</div>
+				<div className={styles.tempBox}>
+					<Temperature temp={convertToCelcius(data.main.temp)} />
+				</div>
 			</div>
 		</div>
 	)
